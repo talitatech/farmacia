@@ -1,17 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/navbar/Navbar'
+import Footer from './components/footer/Footer'
+import Home from './pages/home/Home'
 
-function Navbar() {
+function App() {
   return (
-    <nav className="w-full bg-blue-600 text-white py-4">
-      <div className="container mx-auto flex justify-between px-6">
-        <h1 className="text-2xl font-bold">Farmácia Popular</h1>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
 
-        <div className="flex gap-4">
-          <Link to="/">Home</Link>
-        </div>
-      </div>
-    </nav>
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
   )
 }
 
-export default Navbar
+export default App
