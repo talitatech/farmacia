@@ -8,6 +8,8 @@ function Navbar() {
 
         <div className="flex gap-4">
           <Link to="/">Home</Link>
+          <Link to="/categorias">Categorias</Link>
+          <Link to="/cadastrarcategoria">Cadastrar Categoria</Link>
         </div>
       </div>
     </nav>
